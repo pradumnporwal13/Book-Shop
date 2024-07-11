@@ -1,0 +1,838 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+*::selection{
+    color: rgb(220, 2, 2);
+    background-color: white;
+    font-weight: 400;
+}
+
+*::-webkit-scrollbar{
+    width: 5px;
+    background-color:#990000;
+}
+*::-webkit-scrollbar-thumb{
+    color: white;
+    background-color: white;
+    border-radius: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+    cursor: url(cursor.png);
+}
+
+body {
+    background-color: #1f0101;
+    height: 600vh;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+body.light-mode {
+    background-color: #da0404;
+    color: white;
+}
+
+/* NavBar */
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #1c0000; */
+    /* background-image: linear-gradient(rgba(0,0,0,0.000001),#111111),url("https://cdn.pixabay.com/photo/2019/09/30/14/29/books-4515917_1280.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; */
+    /* visibility: hidden; */
+    color: white;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* pure page par padding left right se padding 20px hogi */
+    /* position: fixed; */
+}
+
+div ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div ul li {
+    list-style: none;
+    padding: 15px;
+    color: white;
+}
+
+div ul i{
+    display: none;
+}
+
+div ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    font-weight: 300;
+}
+
+@media(max-width: 920px){
+    .Navbar{
+        padding: 7px 10px;
+        height: 45px;
+    }
+    div ul li{
+        display: none;
+        justify-content: space-between;
+    }
+
+    div ul i{
+        font-size: 35px;
+        display: flex;
+        margin-top: 5px;
+    }
+
+    div ul label{
+        margin-right:5vh;
+    }
+}
+
+div ul li a:hover {
+    color: orangered;
+}
+
+/* toggle button css */
+/* The switch - the box around the slider */
+.switch {
+    margin-left: 100px;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+    position: relative;
+    top: 7px;
+    border: 1.0px solid white;
+    border-radius: 30px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    --background: #360202;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px white;
+    background: var(--background);
+    transition: .5s;
+}
+
+input:checked+.slider {
+    background-color: #5d0404;
+}
+
+input:checked+.slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+
+
+/* intro section */
+#intro {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), #1e0101), url("books-4515917_1280.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    display: flex;
+    justify-content: safe;
+    padding-left: 85px;
+    padding-right: 85px;
+}
+
+@media (max-width:920px) {
+    #intro {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), #111111), url("books-4515917_1280.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 150vh;
+        padding-left: 25px;
+        padding-right: 25px;
+
+    }
+
+}
+
+
+
+/* intro-left */
+#intro-left {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#intro-left h1 {
+    color: red;
+    font-size: 50px;
+    font-weight: 900;
+    padding-top: 20vh;
+}
+
+#intro-left p {
+    color: white;
+    padding: 5px 0px;
+    font-weight: 300;
+}
+#intro-left h3{
+    color: rgb(217, 255, 0); font-size: 20px;font-weight: 100; padding-top: 5px; font-style: none;
+}
+
+@media (max-width:920px) {
+    #intro-left {
+        justify-content: center;
+        align-items: center;
+    }
+    #intro-left p{
+        text-align: center;
+    }
+
+    #intro-left h1 {
+        font-size: 35px;
+        padding-top: 15vh;
+        text-align: center;
+    }
+    #intro-left h3{
+        font-size: 17px;
+        text-align: center;
+    }
+    #intro-left .btn{
+        text-align: center;
+        align-content: center;
+        width: 100%;
+        /* margin-left: 25%; */
+    }
+    #intro-left .CallBtn {
+        margin-left: 30%;
+    }
+
+}
+
+
+.btn {
+
+    height: 30px;
+    width: 200px;
+    background-color: red;
+    border: 2px solid red;
+
+    font-size: 15px;
+    /* font-style: italic; */
+    padding: 3px 20px;
+    margin-top: 20px;
+    font-weight: 500;
+    display: block;
+    transition: 500ms;
+    animation: both;
+
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background-color: red;
+    border: 2px solid red;
+    color: white;
+
+    /* border-radius: 4px; */
+    transform: scale(1.09);
+}
+
+.btn a:hover {
+    font-weight: 600;
+}
+
+.CallBtn {
+    margin-top: 20px;
+    height: 40px;
+    width: 40px;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+    transition: all 0.3s ease-in-out;
+}
+
+.CallBtn:hover {
+    color: white;
+    background-color: rgb(71, 255, 47);
+    border-color: greenyellow;
+    transform: scale(1.0);
+
+}
+
+.MailBtn {
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.MailBtn:hover {
+    color: white;
+    background-color: red;
+    border-color: red;
+}
+
+.WhatsAppBtn {
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+    transition: all 0.3s ease-in;
+}
+
+.WhatsAppBtn:hover {
+    color: white;
+    background-color: rgb(10, 218, 10);
+    border-color: rgb(10, 218, 10);
+    transform: rotate(360deg)
+}
+
+/* intro-right */
+#intro-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 400px;
+    overflow: hidden;
+}
+
+@media (max-width:920px) {
+    #intro-right {
+        /* visibility: hidden; */
+        padding-top: 30px;
+        align-items: center;
+        justify-content: center;
+        padding-left: 4px;
+    }
+}
+
+#Book1 {
+    /* margin-left: 100px; */
+    position: relative;
+    z-index: 3;
+}
+
+@media (max-width:920px) {
+    #Book1 {
+        margin-left: 20px;
+    }
+}
+
+#Book2 {
+    position: relative;
+    left: -150px;
+    z-index: 2;
+    transition: 2s;
+    animation: both;
+}
+
+#Book2:hover {
+    z-index: 3;
+    height: 450px;
+}
+
+#Book3 {
+    position: relative;
+    left: -250px;
+    z-index: 1;
+    transition: 2s;
+    animation: both;
+}
+
+#Book3:hover {
+    z-index: 3;
+    height: 450px;
+    left: -350px;
+}
+
+/* Best Sellers */
+#best-sellers {
+    margin-top: 0%;
+
+}
+
+.book-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-card:hover {
+    transform: scale(1.02);
+}
+
+.book-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.book-card .book-title {
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.book-card .book-info {
+    color: #333333a6;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.book-card .book-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.book-card .add-button {
+    margin-top: 10px;
+    width: 300px;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0px;
+    border: 1px solid #ff0000;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.book-card .add-button:hover {
+    background-color: #990000;
+}
+
+.book-card.added .add-button {
+    background-color: #00cc00;
+}
+
+
+/* Recommendations Section */
+#recommendations{
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.search-bar{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+}
+
+#SearchHolder{
+    width: 500px;
+    height: 40px;
+    border-radius: 0%;
+    border: 0px solid white;
+    border-top-left-radius: 19px;
+    border-bottom-left-radius: 19px;
+    padding-left: 30px;
+}
+
+#SearchButton{
+    background-color: #990000;
+    color: white;
+    height: 41.6px;
+    width: 50px;
+    border: 0.3px solid #990000;
+    border-top-right-radius: 19px;
+    border-bottom-right-radius: 19px;
+}
+
+#SearchButton:hover{
+    background-color: #5d0404;
+    border: 0.3px solid #5d0404;
+}
+
+/* recommendation cards styling */
+.book-Recommendation-cards{
+    margin-top: 30px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.Recommendation-Card{
+    padding: 6px;
+    max-width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #990000;
+    color: goldenrod;
+    border-radius: 4px;
+    border: 1.2px solid black;
+    transition: 200ms;
+    animation: both;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Recommendation-Card:hover {
+    background-color: #3b0202;
+    transform: scale(1.01);
+}
+
+.BookTitle {
+    color: goldenrod;
+    text-align: left;
+    padding: 5px 0px;
+}
+
+.Fiction-Or-non-fiction {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.BookInfo {
+    color: white;
+    font-size: 12px;
+    text-align: left;
+    font-weight: 200;
+}
+
+.BookInfo:hover {
+    /* color: red; */
+    font-size: 12.1px;
+}
+
+.PURCHASEButton-in-Recommendation-section {
+    min-width: 220px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1.2px solid white;
+    padding: 4px;
+}
+
+.PURCHASEButton-in-Recommendation-section:hover {
+    background-color: rgba(172, 255, 47, 0.833);
+    border-color: rgba(172, 255, 47, 0.833);
+    color: white;
+    font-weight: 700;
+}
+
+/* review section  */
+#reviews {
+    padding: 20px 85px;
+}
+@media (max-width:920px){
+    #reviews{
+        padding: 2% 3%;
+    }
+}
+
+.reviewers-Cards {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.reviewers-Cards::-webkit-scrollbar{
+    /* visibility: hidden; */
+    display: none;
+}
+
+.review-Card {
+    background-color: rgb(225, 223, 223);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    width: 200px;
+    height: 370px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 7vh;
+}
+
+.review-Card:hover {
+    background-color: rgb(193, 190, 190);
+}
+
+.Review-Section-Image {
+    
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    border: 2px solid #990000;
+    background-color: #333;
+    object-position: center;
+    object-fit: cover;
+    
+
+}
+
+.reviewer-Name {
+    font-size: 20px;
+    text-align: center;
+}
+
+.review {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+    color: rgb(52, 51, 51);
+
+}
+
+
+/* review form  */
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 85%;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://cdn.pixabay.com/photo/2023/05/16/09/13/lamps-7997033_1280.jpg");
+    border-radius: 20px 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid white;
+    transition: all 0.4s ease;
+}
+
+.container:hover {
+    transform: scale(1.01);
+}
+
+#ReviewForm {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+#ReviewForm:hover {
+    background-color: white;
+}
+
+#ReviewForm::after {
+    color: #333;
+    background-color: whitesmoke;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+input[type="submit"] {
+    justify-content: center;
+    width: 50.5%;
+    padding: 10px;
+    margin-left: 1.1%;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(0, 128, 0, 0.521);
+    width: 100%;
+    border: 1px solid white;
+    transform: scaleX(1.025);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+textarea:hover,
+input[type="text"]:hover,
+input[type="email"]:hover {
+    background-color: #d2d2d2;
+}
+
+/* footer  */
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 40px 85px;
+    text-align: center;
+    /* margin-top: 50%; */
+    /* position: absolute;
+    bottom: 0%;
+    margin-bottom: 0%; */
+}
+
+.social-media {
+    margin-bottom: 20px;
+    display: block;
+    justify-content: center;
+}
+
+.SocialMediaIcons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.footer-links ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.back-to-top a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+#Copyright {
+    margin-top: 40px;
+    font-size: 12px;
+    color: grey;
+    text-align: center;
+}
+
+

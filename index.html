@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="BookShopLogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>संग्रह पुस्तकालय</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="">
+    <!-- Nav Bar -->
+    <nav class="Navbar">
+        <div class="logo">
+            <img src="BookShopLogo.png" alt="Logo" height="30px">
+            <h3 style="margin-left: 10px; font-weight: 900; font-size: large;">  E पुस्तकालय</h3>
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#best-sellers">Best Sellers</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <i class="ri-menu-line"></i>
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-- Intro Section -->
+    <section id="intro">
+        <div id="intro-left">
+            <h1>संग्रह पुस्तकालय</h1>
+            <p>
+                "Books have the ability to transport readers to new worlds, ignite their imagination, and evoke profound
+                emotions. They provide a gateway to knowledge, offer entertainment,<br> and fuel personal growth, making
+                them highly sought-after and capable of generating strong sales."</p>
+            <h3>
+                <strong>16000+</strong> Books collection </h3>
+            <button class="btn">
+                <a href="#best-sellers">Best Sellers</a>
+            </button>
+            <button class="CallBtn">
+                <i class="fa fa-phone" style="font-size:24px"></i>
+            </button>
+            <button class="MailBtn">
+                <i class="fa fa-envelope" style="font-size:24px"></i>
+            </button>
+            <button class="WhatsAppBtn">
+                <i class="fa fa-whatsapp" style="font-size:24px"></i>
+            </button>
+        </div>
+        <div id="intro-right">
+            <img src="books/bhagavad-gita.jpg" alt="" id="Book1" height="400px">
+            <img src="books/richDadPoorDad.jpg" alt="" id="Book2" height="350px">
+            <img src="books/habits.jpg" alt="" id="Book3" height="300px">
+
+        </div>
+    </section>
+    <!-- Best Sellers Section -->
+    <section id="best-sellers">
+        <h2 style="color: whitesmoke; font-size: 35px;font-weight: 200; margin-top: 30px; text-align: center;">Best
+            Sellers<img src="pngtree-three-dimensional-gold-award-star-logo-png-image_5062592-removebg-preview.png"
+                style="position: relative; top: 23px;" alt="" height="70px"></h2>
+        <p
+            style="color: grey; font-size: 15px;font-weight: 100; margin-top: 10px; text-align: center;font-style: italic;">
+            Most Purchased books of the financial year 2023 on संग्रह पुस्तकालय</p>
+        <div class="book-cards">
+            <!-- Add book cards dynamically here -->
+            
+        </div>
+    </section>
+    <!-- Recommendations Section  -->
+    <section id="recommendations">
+
+
+        <h2 style="color: whitesmoke; font-size: 35px;font-weight: 200; margin-top: 30px; text-align: center;">Our
+            Recommendations</h2>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for a book at संग्रह पुस्तकालय " id="SearchHolder">
+            <button type="submit" id="SearchButton"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="book-Recommendation-cards">
+            <!-- Add book cards dynamically here -->
+            <!-- Cards Data is not hard Coded -->
+            <!-- Its Comes Dynamically from Java Script -->
+        </div>
+
+    </section>
+    <!-- Review Section  -->
+    <section id="reviews">
+        <h2 style="color: whitesmoke; font-size: 35px;font-weight: 200; margin-top: 30px; text-align: center;">Reviews</h2>
+        <p style="color: grey; font-size: 15px;font-weight: 100; margin-top: 10px; text-align: center;font-style: italic;">Some Testemonial of our संग्रह पुस्तकालय</p>
+        
+        <div class="reviewers-Cards">
+            <!-- Review come Here Dynamically from JavaScript -->
+        </div>
+        <br><br><br>
+        <!-- Reviews Form -->
+        <center>
+            <div class="container animated">
+
+                <form>
+                    <h2 style="color: whitesmoke; font-size: 35px;font-weight: 200; margin-top: 30px; text-align: center;">Write Your Reviews</h2>
+                    <br><br>
+                    <input type="text" id="ReviewForm" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Write your review here" required></textarea>
+                    <input type="submit" value="Submit Review">
+                </form>
+            </div>
+        </center>
+    </section>
+    <br><br><br>
+    <!-- footer  -->
+    <footer id="contact">
+        <div class="social-media">
+            Follow Us Here also
+            <div class="SocialMediaIcons">
+                <a href=""><i class="fa fa-instagram"></i></a>
+                <a href=""><i class="fa fa-whatsapp"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+                <a href=""><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#" target="_blank">Terms and Conditions</a></li>
+                <li><a href="#" target="_blank">Privacy Policy</a></li>
+                <li><a href="#" target="_blank">Copyright Information</a></li>
+            </ul>
+        </div>
+        <hr style="color: grey;">
+        <div id="Copyright">
+            Copyright &#169; pradumnporwal.com | All Rights Reserved
+        </div>
+        <br>
+        <div class="back-to-top">
+            <a href="#intro"><i class="fa fa-arrow-up"></i></a>
+        </div>
+    </footer>
+    
+    <!-- for Adding Java Script  -->
+    <script src="script.js"></script>
+</body>
+
+
+</html>
